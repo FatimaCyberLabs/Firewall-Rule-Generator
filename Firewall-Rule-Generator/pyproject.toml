@@ -1,0 +1,25 @@
+﻿[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "firewall-rule-generator"
+version = "1.0.0"
+description = "Genera reglas auditables para iptables, nftables y Windows Firewall."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "FatimaCyberLabs"}]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0,<9.0"]
+
+[project.scripts]
+firewall-rule = "src.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.setuptools]
+packages = ["src"]

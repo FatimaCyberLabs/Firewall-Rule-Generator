@@ -1,0 +1,20 @@
+[
+  {
+    "category": "firewall_rule",
+    "value": "iptables -A INPUT -s 203.0.113.45 -p tcp --dport 22 -j DROP",
+    "source": "examples\\sample.txt",
+    "severity": "info"
+  },
+  {
+    "category": "firewall_rule",
+    "value": "iptables -A INPUT -s 10.0.0.5 -p tcp --dport 443 -j ACCEPT",
+    "source": "examples\\sample.txt",
+    "severity": "info"
+  },
+  {
+    "category": "firewall_rule",
+    "value": "iptables -A INPUT -s 198.51.100.22 -p tcp --dport 3389 -j DROP",
+    "source": "examples\\sample.txt",
+    "severity": "info"
+  }
+]
